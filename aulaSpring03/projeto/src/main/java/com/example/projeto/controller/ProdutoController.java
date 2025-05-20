@@ -23,7 +23,6 @@ public class ProdutoController{
         this.produtoService = produtoService;
     }
 
-
     @GetMapping
     public List<Produto> listarProdutos(){
         return produtoService.listarProdutos();

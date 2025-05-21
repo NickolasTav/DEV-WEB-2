@@ -1,0 +1,38 @@
+# Definição de variáveis (ambiente “local” do REST Client)
+@base_url = https://reimagined-lamp-qwp46wp7w6qh94w7-8080.app.github.dev
+
+### Inserir novo produto
+POST {{ base_url }}/api/veiculos
+Content-Type: application/json
+
+
+{
+  "modelo": "Corrola",
+  "ano": 2024,
+  "valor": 190000.00
+}
+
+Content-Type: application/json
+
+
+### Listar todos os produtos
+GET {{ base_url }}/api/veiculos
+Accept: application/json
+
+### Buscar veiculos por ID
+GET {{ base_url }}/api/veiculos/1
+Accept: application/json
+
+### Atualizar produto (PUT)
+PUT {{ base_url }}/api/veiculos/1
+Content-Type: application/json
+
+{
+  "nome": "Corolla",
+  "ano": 2023,
+  "valor" : 150000.00 
+}
+
+### Remover pessoa (DELETE)
+DELETE {{ base_url }}/api/veiculos/1
+Accept: */*
